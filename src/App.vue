@@ -1,7 +1,10 @@
 <template >
 <div id="app">
+
  <toDoContainer content="to-dos"/>
- </div>
+ 
+  </div>
+
 </template>
 
 <script>
@@ -11,7 +14,20 @@ export default {
   name: 'App',
   components: {
     ToDoContainer,
+    
   }, 
 }
 
+
+
 </script>
+
+
+<style scoped>
+
+body {
+  background-color: red;
+}
+
+</style>
+

@@ -45,10 +45,12 @@ export default {
 <style scoped>
 .completed {
   text-decoration: line-through;
-  background-color: rgb(243, 242, 165);
+  background-color: #f3f2a5;
 }
 
 li {
+  padding: 5%;
+  margin-right: 10%;
   justify-content: center;
   position: relative;
   transition-delay: 3s;
@@ -61,7 +63,7 @@ li {
     border-radius: 10%;
     border: 3px solid #333;
     max-width: 500px;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
 }
 
 li a {
@@ -79,6 +81,7 @@ li a {
 }
 
 li button {
+  font-weight: bold;
   float: right;
   margin-top: 1px;
   margin-left: 2%;

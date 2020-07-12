@@ -17,13 +17,16 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
   .header {
+    
+    top: 0%;
     font-family: 'Pattaya', sans-serif;
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0,  0.5);
-    border-radius: 5px;
+    box-shadow: 0px 5px 35px rgba(0, 0, 0,  0.5);
+    position: fixed;
+    width: 100%;
   }
 
   .header a {

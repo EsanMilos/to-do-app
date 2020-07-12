@@ -1,10 +1,28 @@
 <template>
 <div>
+   <vue-particles
+    color="#7B1FA2"
+    :particleOpacity="0.9"
+    :particlesNumber="120"
+    shapeType="polygon"
+    :particleSize="6"
+    linesColor="#f3f2a5"
+    :linesWidth="1"
+    :lineLinked="true"
+    :lineOpacity="0.4"
+    :linesDistance="100"
+    :moveSpeed="6"
+    :hoverEffect="true"
+    hoverMode="grab"
+    :clickEffect="true"
+    clickMode="repulse"
+> </vue-particles>
 <Header/>
     <div class="main-box">
       <img src="../assets/logo.png">
 <TodoList />
     </div>
+  
     </div>
 </template>
 
@@ -27,6 +45,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
+#particles-js {
+  background-color: #f3f2a5;
+ height: 100vh;
+}
+
 .main-box {
     font-family: Roboto Condensed, san-serif;
     color: rgb(32, 32, 32);
@@ -39,10 +62,10 @@ export default {
     max-height: 90%;
     left: 29%;
     right: 50%;
-    top: 19%;
+    top: 24%;
     bottom: 5%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.05);
   }
 
   .main-box img {
@@ -55,19 +78,13 @@ export default {
 
 .main-box {
     text-align: center;
-    margin-top: 34%;
-    overflow: auto;
-    text-align: center;
+    margin-top: 20%;
     position: fixed;
-    display: inline-block;
     width: 70%;
     max-height: 70%;
     left: 15%;
     right: 35%;
     top: 5%;
-    bottom: 5%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
   }
 
 .main-box img {

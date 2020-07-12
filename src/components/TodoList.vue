@@ -1,7 +1,7 @@
 <template>
-<div class="container">
-    <div class="row">
-      <div class="col-12 py-5">
+<div>
+    <div>
+      <div>
         <h1>{{ listName }}</h1>
       </div>
     </div>
@@ -18,12 +18,12 @@
             :completed="todo.completed"
             @on-toggle="toggleTodo(todo)"
             @on-delete="deleteTodo(todo)"
-            @on-edit="editTodo(todo, $event)"
           />
         </ul>
       </div>
     </div>
-  </div>
+    </div>
+  
 </template>
 
 <script>
@@ -38,9 +38,9 @@ export default {
   data() {
     return {
       todos: [
-        { description: "Do the dishes", completed: false },
-        { description: "Take out the trash", completed: true },
-        { description: "Finish doing laundry", completed: false },
+        { description: "Get some sleep", completed: false },
+        { description: "Go for a walk", completed: true },
+        { description: "Eat something", completed: false },
       ],
     };
   },
@@ -53,9 +53,6 @@ export default {
     },
     deleteTodo(deletedTodo) {
       this.todos = this.todos.filter(todo => todo !== deletedTodo);
-    },
-    editTodo(todo, newTodoDescription) {
-      todo.description = newTodoDescription;
     },
   },
  components: { Todo, CreateTodo },
