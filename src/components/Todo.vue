@@ -4,18 +4,9 @@
       title="delete if done"
       :class="{ completed }"
       @click="$emit('on-toggle')"
-      v-if="!isEditing"
     >
       <span>{{ description }}</span>
     </a>
-    <form v-else  @submit.prevent="finishEditing()">
-      <input
-        type="text"
-        v-model="newTodoDescription"
-        @blur="finishEditing()"
-        ref="newTodo"
-      />
-    </form>
     
     <button @click="$emit('on-delete')">
       X
@@ -25,16 +16,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isEditing: false,
-      newTodoDescription: "",
-      myStyle : {
-        backgroundColor: "red",
-      }
-
-    };
-  },
   props: {
     description: String,
     completed: Boolean
